@@ -1,0 +1,16 @@
+
+
+table, th, td{
+    border: 1px solid Black
+    }
+    th, td{
+        padding: 8px;
+    }
+
+#about, #Unternehmen, #öffnungzeiten{
+    display: inline-block;
+    width: 25%;
+    vertical-align: top;
+    margin: 20px;
+}
+
