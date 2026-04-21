@@ -1,49 +1,125 @@
-<h1>Hallo Internship Finder</h1>
+<!doctype html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Internship Finder</title>
+    <meta
+      name="description"
+      content="Internship Finder: Plattform, mit der Studierende Praxissemester-Stellen finden, sich bewerben und Unternehmen Angebote verwalten können."
+    />
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Internship Finder (Übung)</title>
-  
-</head>
-<body style=" font-family: Arial, Arial, Helvetica, sans-serif">
+    <link rel="stylesheet" href="./Style.css" />
 
-    <nav><a href="#zeit">Öffnungszeit</a> | <a href="index.html">Zur neuen Startseite</a></nav>
-    <header>
-    <h1> Internship Finder</h1>
-    <p>Ist ein Tool, wo Studierende eine <strong>Praxissemester-Stelle</strong> finden können.</p>
+  </head>
+  <body>
+    <a class="skip-link" href="#content">Zum Inhalt springen</a>
+
+    <header class="site-header" id="top">
+      <div class="container header-inner">
+        <a class="brand" href="#top" aria-label="Zur Startseite">
+          <img class="brand-logo" src="internship-finder-logo.png" alt="Internship Finder" />
+        </a>
+
+        <form class="header-search" role="search" aria-label="Suche">
+          <label class="sr-only" for="q">Suche</label>
+          <input id="q" name="q" type="search" placeholder="search" autocomplete="off" />
+        </form>
+
+        <div class="header-actions" aria-label="Account">
+          <a class="btn btn-soft" href="#signup">Sign up</a>
+          <a class="btn btn-soft" href="#login">Login</a>
+        </div>
+
+        <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="mobile-nav">
+          <span class="nav-toggle-lines" aria-hidden="true"></span>
+          <span class="sr-only">Menü öffnen</span>
+        </button>
+      </div>
+
+      <nav id="mobile-nav" class="mobile-nav" aria-label="Mobile Navigation">
+        <a href="#top">Home</a>
+        <a href="#unternehmen">Unternehmen</a>
+        <a href="#kontakt">Kontakt</a>
+        <a href="#datenschutz">Datenschutz</a>
+        <a href="#impressum">Impressum</a>
+      </nav>
     </header>
-    <p> <img src="1671025648797.png" style="width:400px;"></p>
 
+    <main id="content">
+      <section class="hero">
+        <div class="container hero-grid">
+          <div class="hero-copy">
+            <h1 class="hero-title">Finde dein perfektes Praktikum</h1>
+            <p class="hero-subtitle">Teile und entdecke Praktika von Studierenden für Studierende.</p>
 
-    <p> Für den Studiengang</p>
-    <ol>
-        <li>WIN</li>
-        <li>GIB</li>
-        <li>AIN</li>
-    </ol>
-    <section id = "zeit">
-        <h2> Öffnungszeit</h2>
-        <table>
-            <tr>
-                <th>Tag</th>
-                <th>Zeit</th>
-            </tr>
-            <tr>
-                <th>Montag - Donnerstag</th>
-                <th>08:00 - 12:00</th>
-            </tr>
-            <tr>
-                <th>Freitag</th>
-                <th>Geschlossen</th>
-            </tr>
+            <form class="filters" aria-label="Filter">
+              <label class="field">
+                <span class="sr-only">Ort eingeben</span>
+                <input type="text" placeholder="Ort eingeben" />
+              </label>
+              <label class="field field-select">
+                <span class="sr-only">Bereich wählen</span>
+                <select>
+                  <option selected disabled>Bereich Wählen</option>
+                  <option>Softwareentwicklung</option>
+                  <option>Systemengineering</option>
+                  <option>Enterprise Architect</option>
+                  <option>Data Analyst</option>
+                </select>
+              </label>
+            </form>
 
-        </table>
-    </section>
-    <p>Wir sind in der Nähe von <a href="https://www.htwg-konstanz.de">HTWG Konstanz</a>.</p>
-</body>
+            <a class="btn btn-home" href="#top" aria-label="Home">
+              <span aria-hidden="true">⌂</span>
+              Home
+            </a>
+          </div>
 
+          <div class="hero-media" aria-label="Hero Bild">
+            <img class="hero-image" src="hero.jpg" alt="Person mit rotem Rucksack blickt in den Himmel." />
+          </div>
+        </div>
+      </section>
 
+      <section id="unternehmen" class="section">
+        <div class="container">
+          <div class="cards-grid" aria-label="Unternehmen">
+            <article class="company-card">
+              <h2 class="company-title">Konzept Informationssysteme GmbH</h2>
+              <div class="company-media">
+                <img src="konzept.png" alt="Konzept Logo" loading="lazy" />
+              </div>
+              <p class="company-text">
+                IT-Dienstleister für individuelle Software, Prozessdigitalisierung und IT-Beratung.
+              </p>
+              <a class="btn btn-primary" href="#signup">Registriere für mehr</a>
+            </article>
+
+            <article class="company-card">
+              <h2 class="company-title">Advantest</h2>
+              <div class="company-media">
+                <img src="advantest.png" alt="Advantest Logo" loading="lazy" />
+              </div>
+              <p class="company-text">
+                Anbieter von Testsystemen für Halbleiter — Fokus auf Qualität, Automatisierung und Innovation.
+              </p>
+              <a class="btn btn-primary" href="#signup">Registriere für mehr</a>
+            </article>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-inner">
+        <nav class="footer-links" aria-label="Footer">
+          <a id="kontakt" href="#kontakt">Kontakt</a>
+          <a id="datenschutz" href="#datenschutz">Datenschutz</a>
+          <a id="impressum" href="#impressum">Impressum</a>
+        </nav>
+        <p class="footer-copy">© <span id="year"></span> Internship Finder</p>
+      </div>
+    </footer>
+  </body>
 </html>
